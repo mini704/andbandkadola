@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Love Anniversary</title>
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<style>
+   
+
+.video-container {
+    position: relative;
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#video1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.heading{
+    color:#ffffffe5;
+    font-family: 'fansong',cursive;
+    font-family: Georgia, serif;
+}
+#name{
+    color: yellow;
+    /* font-family: emoji; */
+    font-family: "Times New Roman", Times, serif;
+   
+}
+#landing {
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#landing h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.glow-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    background-color: #f3008e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 10px #be00fe, 0 0 20px #be00fe, 0 0 30px #be00fe, 0 0 40px #be00fe;
+}
+#ourStory .timeline .event {
+    margin: 20px;
+    background-image: url("https://i.ibb.co/C57wKjW/LOVE-BACKGROUND.jpg");
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 55px rgba(0, 0, 0.1, 1);
+    color: aliceblue;
+}
+
+.event img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(109, 0, 218)
+}   
+
+.letter {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fa9acf;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0.1, 1);
+    margin: 0 auto;
+   
+}
+@media (min-width:500px) {
+    .letter {width: 80%; font-size: 16px;  }  
+}
+@media (max-width:499px) {
+    .letter {width: 90%; font-size: 12px;  }  
+}
+.futurePlan{
+    font-family: 'Courier New', Courier, monospace;
+}
+audio {
+    width: 80%;
+    margin-top: 20px;
+}
+video{
+    width: 25%;
+    margin-top: 20px; 
+}
+
+#message{
+    background-color: rgb(255, 223, 238);
+    width: 90%;
+    padding: 1%;
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 87%);
+}
+@media (min-width:500px) {
+    #message{font-size: 16px;}
+}
+@media (max-width:499px) {
+    #message{font-size: 12px;}
+}
+#contact form button {
+    /* padding: 10px;
+    margin: 10px; */
+    width: 23%;
+    padding: 1%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+   background-color: #fd3c86;   /* #ff6f61 */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#contact form button:hover{
+    background-color: #db3172;
+}
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    background-color: #ffe4e1;
+    background-repeat: repeat;
+    color: #b03060; 
+    font-family: 'Dancing Script', cursive; 
+}
+
+.contributor{
+    color: aliceblue;
+    margin-top: 1%;
+}
+  .memories{
+    background-image: url('https://i.ibb.co/ZMJKqYm/hq720.jpg');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0.1, 1);
+    width: 85%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .ourMemories{
+  
+   margin: 10px;
+    border:2px solid palevioletred;
+    width:250px;
+    height: 444px;
+    border-radius: 3%;
+    object-fit: cover;
+  }
+  .loveLetter{
+    color: #000000;
+  }
+</style>
+<body>
+    <!-- Landing Page -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline id="video1">
+            <source src="1099414335-preview.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <section id="landing"><br><br>
+            <h1 class="heading"  >Happy Love Anniversary</h1><h1 id="name" style=" font-size: 60px;">SUJATA</h1>
+            <br><br><p>You are my everything. Thank you for being by my side...</p><br>
+            <button class="glow-button" onclick="scrollToSection('ourStory')" style="font-family: serif;">Explore Our Journey</button>
+        </section>
+    </div>
+    <!-- Our Story Section -->
+    <section id="ourStory">
+        <h2 >Our Story</h2>
+        <div class="timeline">
+            <div class="event">
+                <h2 style="color: aliceblue;" >When We First Met</h2>
+                <p>It was love at first sight...</p>
+                <div>
+                    <img src="https://i.ibb.co/tXwNX9N/98d0bf30c420731af3e7fe76ae1705bd.jpg" alt="First Meet">
+                    <img src="https://i.ibb.co/tXwNX9N/98d0bf30c420731af3e7fe76ae1705bd.jpg" alt="First Meet">
+                    <img src="https://i.ibb.co/tXwNX9N/98d0bf30c420731af3e7fe76ae1705bd.jpg" alt="First Meet">
+                </div>
+            </div>
+            <!-- Add more events as needed -->
+        </div>
+    </div>
+    </section>
+    <hr>
+    <!-- Photo Gallery -->
+    <section id="gallery">
+        <h1 >Photo Gallery</h1>
+        Play the song for better experience...
+        <br>
+        <iframe width="100%" height="60" src="https://vocaroo.com/embed/1gT65pF838Hk" frameborder="0" allow="autoplay"></iframe>
+  <!--Carousal Slider for contributors--> 
+  <br>     <br> 
+  <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card  " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">You & Me</h5>
+    </div>
+  </div>
+  </div>
+ </div>
+      <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex   justify-content-around">
+        <div class="card  " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Together Always</h5>
+    </div>
+  </div>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Eternal Love</h5>
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">My Heart </h5>
+      
+    </div>
+  </div>
+         
+          
+      </div>
+    </div><div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Forever Yours</h5>
+      
+    </div>
+  </div>
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Always in My Heart</h5>
+      
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Captured Love</h5>
+      
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">In Your Arms</h5>
+      
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/x5fP1hB/e073b06b62d6b591e141a1f58eb0bdce.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Love Beyond Words</h5>
+      
+    </div>
+  </div>
+         
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    </section>
+    <hr>
+    <!-- Love Letter Section -->
+    <section id="loveLetter">
+        <h2>My Love Letter to You</h2><br>
+        Please read carefully and try to understand the feelings...
+        <div class="letter">
+            <p class="loveLetter">To My Dearest Sujata,</p>
+            <p class="loveLetter">On this special day, our love anniversary, I find myself looking back on the beautiful journey we've shared together. From the very beginning, you brought light into my life in ways I never imagined possible. Every moment with you, whether near or far, has been a chapter of joy, learning, and growth.</p><p class="loveLetter">I still remember how our love blossomed despite the distance that separated us. Your promise to love me always and never betray my trust meant the world to me. You became my Sonu, and I became your Sonai, a bond that felt unbreakable, despite the miles between us.</p> <p class="loveLetter">But like any journey, ours had its bumps. I made mistakes, doubting you when I shouldn't have, and pressuring you in ways that hurt you. For that, I am truly sorry. I now realize how my actions may have impacted you, and I deeply regret any pain I caused. Yet, through it all, you stood by me, showing patience and understanding, even when it wasn't easy.</p> <p class="loveLetter">What I admire most about you, Sujata, is your strength and determination. Your dedication to your dreams and your decision to focus on your studies inspires me. I know how important your goals are to you, and I respect and support every decision you make.</p> <p class="loveLetter">One of the most beautiful parts of our relationship is how we've taught each other. And now, I will teach you web development, any other skills and you, in turn, can teach me English. This exchange of knowledge is not just about learning new skills; it's about deepening our bond, understanding each other better, and growing together.</p><p class="loveLetter">Last year, I forgot about that special day because I was under so much pressure about my college admission. I was torn between whether to drop a year or not, and my father was pressuring me to get admission that year. The admission process was incredibly stressful—I applied to this college without knowing if I would even get in or not. The uncertainty weighed heavily on me, and it made that time even more difficult. Although I’m sorry for that, I should not have forgotten about that special day. It was important, and I regret letting the pressure make me lose sight of what truly matters—us. Even, I didn’t have any friends who got admission with me that year or through this examination, so I felt even more alone during that time. I know you didn’t expect that from me, but unfortunately, it happened. I think you understand the situation and why it was such a difficult time for me. But now, jo bit gya hai, use jane do, and let’s start a new life together, leaving the past behind.</p><p class="loveLetter">Even now, as we navigate the complexities of life, I find myself waiting for you, not out of obligation, but out of a deep, abiding love and respect for the incredible person you are. I remember waiting for you when you were preparing for your exams—I missed you so badly during that time. But what hurt the most was feeling like you treated me as if I didn’t matter to you. It made me feel unworthy of your love, and that pain lingers even now. But please don’t mind it—I will try to move past those feelings because my love for you is stronger than any hurt. I felt jealousy in you at times, but now I realize I have no right to say anything about it. I think, everyone feels a bit jealous when their girlfriend talks to a guy friend, but personally i don't like thet a guy friend talk to you without any reason,I dont't know why!.But I promise you not to behave like that anymore if it makes you uncomfortable. Now, My focus is on supporting you and cherishing our relationship. But if I could wish for anything, it would be to have the Sujata from one year ago back—the one I fell in love with and who made me feel like the luckiest person in the world. If we both put in the same effort from both sides, I believe our relationship can be successful and even stronger than before. Please don’t leave me because I really want you in my life. I don't even need any other friends if you talk with me. Just talking to you releases all my pressure and makes everything feel right again. I can’t even fully describe the feelings I get when I talk with you—it's something beyond words, something that only my heart understands.</p> <p class="loveLetter">If there's one thing I've learned, it's that love isn't just about being together physically; it's about growing together, learning from each other, and supporting each other’s journeys.</p> <p class="loveLetter">On this anniversary, I want to renew my promise to you. I promise to continue growing, to be more understanding, and to love you with all my heart. Whether our paths converge again soon or take longer to meet, know that I am here, with an open heart, ready to listen, ready to support, and always ready to love you.  But now I've realized something—I don't know how it's happening, but I'm finding it difficult to talk with you openly. I'm scared that if I say something wrong, it might hurt you, and we could end up breaking up.</p> <p class="loveLetter">You can share everything with me from A to Z if you feel comfortable, whether it's about someone saying something, someone behaving badly, or any problem you're facing in life. And likewise, I'll always share mine with you because I want us to face everything together.</p><p class="loveLetter">You are my Sonu, the one who completes me, and no matter what the future holds, you will always have a special place in my heart.  I know that I can do anything if you are by my side, giving me strength and support. Here's to the love we've shared, the lessons we've learned, and the beautiful journey ahead. And lastly, I want to tell you, I really really really Love You❤️ and also "You are too good😁"</p>
+            <p class="loveLetter">With all my love and respect,Your Pabitra</p>
+        </div>
+        <br> 
+        <section id="contact">
+            <h2>Leave a Message</h2>
+            <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
+                <textarea id="message"style="color: black; font-family: serif; " name="Message from Sujata about My Love Latter" rows="4" placeholder="Your message about My Love Latter to You..." required></textarea>
+                <div class="h-captcha"  data-captcha="true"></div>
+                <button class="sendButton" type="submit">Send</button> 
+            </form>
+        </section>
+        
+    </section>
+    <hr>
+    <!-- Video Compilation -->
+    <section id="video">
+        <h2>Our Memories</h2>
+    <div class="memories">
+        <iframe class="ourMemories"  src="https://www.youtube.com/embed/dr6Q9OK3s3s?si=Ne-KwZ3t6s5Z8kc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="ourMemories"  src="https://www.youtube.com/embed/dr6Q9OK3s3s?si=Ne-KwZ3t6s5Z8kc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="ourMemories"  src="https://www.youtube.com/embed/dr6Q9OK3s3s?si=Ne-KwZ3t6s5Z8kc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+    </section>
+    <hr>
+    <!-- Future Plans Section -->
+    <section id="futurePlans">
+        <h2>Our Future Plans</h2>
+        <ul class="futurePlan">
+            <li>Hey Madamji, <br>I’ve been thinking about us a lot lately, and while our conversations mean the world to me, I feel like it’s been too long since we last saw each other in person. I miss the connection we share when we're together, and I think it would be really special if we could meet up for Durga Puja this year.<br>I know we both have a lot going on with our studies and responsibilities, but I believe that spending this festive time together would bring us even closer and give us a chance to reconnect in a way that texts and calls just can’t capture.<br>What do you think? If you’re open to it, let me know if there’s a time during Durga Puja that works for you. I’m really looking forward to seeing you and making some new memories together.<br><br>Take care, and I’m excited to hear from you.<br>   With love, Pabitra</li>
+            
+            <!-- Add more plans as needed -->
+        </ul>
+        <div id="map"></div> <!-- You can embed a map here if you wish -->
+    </section>
+     
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Leave a Message</h2>
+        <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
+            <textarea id="message"style="color: black; font-family: serif;" name="Message from Sujata about Our Future Plans" rows="4" placeholder="Your message about Our Future Plans..." required></textarea>
+            <div class="h-captcha" data-captcha="true"></div>
+            <button class="sendButton" type="submit">Send</button>
+           <input type="hidden" name="redirect" value="https://pabitra2635.github.io/form/">
+    </section>
+    <hr><h6 style="text-align:center; color: #472929;Font-family: 'Montserrat', sans-serif; font-weight: 600;">~:End of the Page:~</h6><hr>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script >
+        function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+ 
+        const form = document.getElementById('feedbackForm');
+        
+        form.addEventListener('submit', function(e) {
+        
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+        
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+        </script>
+</body>
+</body>
+</html>
